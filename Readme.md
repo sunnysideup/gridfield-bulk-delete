@@ -20,3 +20,5 @@ composer require heyday/gridfield-bulk-delete
 ```
 $config->addComponent(new GridFieldBulkDeleteForm('buttons-after-right'));
 ```
+
+Forked from: [dnadesign/gridfield-bulk-delete](https://github.com/dnadesign/gridfield-bulk-delete)
