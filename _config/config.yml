@@ -3,4 +3,4 @@ Name: gridfield-bulkdelete
 ---
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_javascript:
-    - 'dnadesign/gridfield-bulk-delete:client/js/bulkdelete_confirm.js'
+    - 'heyday/gridfield-bulk-delete:client/js/bulkdelete_confirm.js'
