@@ -1,25 +1,17 @@
 (function ($) {
-	$.entwine('ss', function ($) {
-		/**
-		 * force a confirm when clearing form submissions
-		 */
 
-		$('.cms-edit-form .bulkdelete_button').click(function (e) {
+	$('.cms-edit-form .bulkdelete_button').click(function (e) {
 
-			var button = $(e.target),
-				value = button.parents('.ss-gridfield-buttonrow').find('select[name="BulkDeleteUntil"] option:selected').text();
+		var button = $(e.target);
+		var action = $.trim(button.text());
+		var message = 'Are you sure you want to ' + action.toLowerCase() + '?';
 
-			var action = (value) ? value : $.trim(button.text());
-			var message = 'Are you sure you want to ' + action.toLowerCase() + '?';
-
-			if (!confirm(message)) {
-				e.preventDefault();
-				return false;
-			} else {
-				this._super(e);
-			}
-		});
-
+		if (!confirm(message)) {
+			e.preventDefault();
+			return false;
+		} else {
+			this._super(e);
+		}
 	});
 
 }(jQuery));
