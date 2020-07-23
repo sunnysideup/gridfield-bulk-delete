@@ -4,7 +4,7 @@
 		 * force a confirm when clearing form submissions
 		 */
 
-		$('.cms-edit-form .bulkdelete_button').click(function (e) {
+		$('.cms-edit-form').on('click', '.bulkdelete_button', function (e) {
 
 			var button = $(e.target);
 
